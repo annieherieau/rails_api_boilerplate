@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' >
+  </head>
+  <body>
+    <h1>Salut <%= @user.first_name %> et bienvenue chez RAYM !</h1>
+    <p>
+      Tu as créé un compte avec l'e-mail suivant : <%= @user.email %>.
+    </p>
+    <p>
+      Pour accéder à ton espace client, clique sur <a href="<%= @url %>user/sign_in">ce lien</a>.
+    </p>
+    <p> À très vite sur <a href="<%= @url %>">RAYM</a> !</p>
+
+  </body>
+</html>
