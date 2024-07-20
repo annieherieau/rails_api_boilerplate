@@ -17,8 +17,8 @@ Devise.setup do |config|
   # config.secret_key = '9abd7e78f1bf03a8f47914e944218b466988260cf7e7891ec76f5d52e28c13986baefa9b770bb208f28a04a39dc6a3ca7381dee2dcb0d73ae40f7935fc058597'
   config.jwt do |jwt|
     # choisir une option (.env ou credentials (secret key base ou jwt)):
-    # jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
-    jwt.secret = Rails.application.credentials.fetch(:secret_key_base)
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+    # jwt.secret = Rails.application.credentials.fetch(:secret_key_base)
     # jwt.secret = Rails.application.credentials.devise[:jwt_secret_key]
 
     jwt.dispatch_requests = [

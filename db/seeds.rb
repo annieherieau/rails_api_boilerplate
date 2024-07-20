@@ -26,6 +26,20 @@ def reset_db
   puts('drop and reset all tables')
 end
 
+def boolean_ratio(percent = 50)
+  ratio = percent.to_f / 100
+  Faker::Boolean.boolean(true_ratio: ratio)
+end
+
+def super_admin
+  User.create!(
+    email: ENV['ADMIN_EMAIL'],
+    password: ENV['ADMIN_PASSWORD'],
+    admin: true
+  )
+  puts("super Admin créé")
+end
+
 def create_users(number)
   number.times do |i|
     User.create!(

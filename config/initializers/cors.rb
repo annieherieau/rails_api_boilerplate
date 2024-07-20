@@ -14,10 +14,10 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
-
+origin = Rails.env.production? ? ENV['PROD_HOST'] : ENV['DEV_HOST']
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "*"
+    origins origin
 
     resource "*",
       headers: :any,
