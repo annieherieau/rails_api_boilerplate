@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  # Route pour le profil utilisateur
+  get 'my_profile', to: 'profiles#show'
+
+  # Route pour le formulaire de contact
+  post 'contact',  to: 'static_pages#send_contact_email'
+
   devise_for :users,
              controllers: {
                sessions: 'users/sessions',
@@ -13,5 +20,5 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "static_pages#hello_world"
 end
