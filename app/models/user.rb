@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   # associations
-  # has_many :orders, dependent: :destroy
+  has_many :posts, dependent: :destroy
 
   # Callbacks
   after_create :welcome_send

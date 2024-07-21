@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :post_tags
+  resources :tags
+  resources :posts
 
   # Route pour le profil utilisateur
   get 'my_profile', to: 'profiles#show'

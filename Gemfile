@@ -38,17 +38,27 @@ gem "rack-cors"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "rspec-rails", "~> 6.1"
+  gem "factory_bot_rails", "~> 6.4"
+  gem "shoulda-matchers", "~> 6.2"
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'pry', '~> 0.14.2'
+  gem "byebug", "~> 11.1"
+  gem "rubocop", "~> 1.64"
+  gem "table_print", "~> 1.5"
+  gem "solargraph", "~> 0.50.0"
 end
-
 
 gem "devise", "~> 4.9"
 gem "devise-jwt", "~> 0.11.0"
-gem "table_print", "~> 1.5"
 gem "faker", "~> 3.4"
-gem "rubocop", "~> 1.64"
 gem "dotenv", "~> 3.1"
+
+
+
+
+
